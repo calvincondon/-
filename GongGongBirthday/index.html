@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>公公的生日</title>
+</head>
+<style>
+
+#myAnimation {
+  position: absolute;
+}
+</style>
+
+<body onload="myMove()">
+<div style="margin-left: 100px;">
+<img src="https://www.partiesbymartins.com/image/cache/data/Floral/Balloons-600x600.jpg" style="height: 100px; width: 100px; float: left;"alt="">
+<h1 style="text-align: center; margin-top: 50px; color: red; font-size: 50px; float: left;">祝你生日快乐, 长寿， 健康，幸福!</h1>
+<img src="https://www.partiesbymartins.com/image/cache/data/Floral/Balloons-600x600.jpg" style="height: 100px; width: 100px; float: left;"alt="">
+</div>
+<div id ="myAnimation">
+    <img src="https://i.gifer.com/AuOr.gif" alt="">
+</div>
+<script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var xpos = -500;
+  var ypos = 120;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (xpos == 1000) {
+      xpos=-500;
+    } else {
+      xpos = xpos + 5; 
+      elem.style.left = xpos + 'px'; 
+      elem.style.top = ypos + 'px';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
